@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2026
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-18 10:19+0100\n"
+"PO-Revision-Date: 2026-02-18 09:21+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
+"Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/304958/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/tidskollen/window.py:73 src/tidskollen/main.py:59
+msgid "Tidskollen"
+msgstr "Tidskollen"
+
+#: src/tidskollen/window.py:89
+msgid "Toggle dark/light theme"
+msgstr "Växla mörkt/ljust tema"
+
+#: src/tidskollen/window.py:94
+msgid "Fullscreen"
+msgstr "Helskärm"
+
+#: src/tidskollen/window.py:99
+msgid "Keyboard Shortcuts"
+msgstr "Tangentbordsgenvägar"
+
+#: src/tidskollen/window.py:100
+msgid "About Tidskollen"
+msgstr "Om Tidskollen"
+
+#: src/tidskollen/window.py:101
+msgid "Quit"
+msgstr "Avsluta"
+
+#: src/tidskollen/window.py:126
+msgid "Start"
+msgstr "Starta"
+
+#: src/tidskollen/window.py:132
+msgid "Stop"
+msgstr "Stoppa"
+
+#: src/tidskollen/window.py:139
+msgid "Reset"
+msgstr "Återställ"
+
+#: src/tidskollen/window.py:205
+msgid "Time's up!"
+msgstr "Tiden är slut!"
+
+#: src/tidskollen/window.py:206
+msgid "The timer has finished."
+msgstr "Timern har gått klart."
+
+#: src/tidskollen/window.py:208
+msgid "OK"
+msgstr "OK"
