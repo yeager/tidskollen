@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Tidskollen
+Name[sv]=Tidskollen
+Comment=Visual Time Timer for classrooms and children with autism
+Comment[sv]=Visuell timer för klassrum
+Exec=tidskollen
+Icon=tidskollen
+Terminal=false
+Type=Application
+Categories=Education;Utility;Accessibility;
