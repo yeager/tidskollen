@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[o:danielnylander:p:tidskollen:r:tidskollen-pot]
+file_filter = po/<lang>.po
+source_file = po/tidskollen.pot
+source_lang = en
+type = PO
