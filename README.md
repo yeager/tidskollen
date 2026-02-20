@@ -1,55 +1,57 @@
 # Tidskollen
 
-Visual Time Timer for classrooms and children with autism.
+[![Version](https://img.shields.io/badge/version-0.1.0-blue)](https://github.com/yeager/tidskollen/releases)
+[![License: GPL-3.0](https://img.shields.io/badge/License-GPL%203.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Transifex](https://img.shields.io/badge/Transifex-Translate-green.svg)](https://www.transifex.com/danielnylander/tidskollen/)
 
-> **Målgrupp / Target audience:** Barn och vuxna med autism, ADHD, språkstörning (DLD)
-> och andra funktionsnedsättningar som behöver visuellt tidsstöd. Den krympande cirkeln
-> gör abstrakt tid konkret och synlig. Perfekt för klassrum, hemmet och habilitering.
->
-> **For:** Children and adults with autism spectrum disorder (ASD), ADHD, developmental
-> language disorder (DLD), and other disabilities who need visual time support. The
-> shrinking circle makes abstract time concrete and visible. Perfect for classrooms,
-> home, and rehabilitation settings.
+Visual time timer for classrooms and children with autism — GTK4/Adwaita.
 
-![Screenshot](screenshots/screenshot.png)
+> **For:** Children with autism, ADHD, or DLD who benefit from visual time management. Also useful in classrooms and therapy settings.
+
+![Screenshot](screenshots/main.png)
 
 ## Features
 
-- Large shrinking circle (red → green) for visual countdown
-- Configurable time presets (1–60 min)
-- Sound alert on completion
-- Fullscreen mode for classroom display
-- Dark/light theme toggle
-
-## Requirements
-
-- Python 3.10+
-- GTK4 / libadwaita
-- PyGObject
+- **Visual timer** — large, clear countdown display
+- **Color-coded** — green/yellow/red time zones
+- **Presets** — common intervals (5, 10, 15, 30 min)
+- **Custom timer** — set any duration
+- **Sound alerts** — notification when time is up
+- **Dark/light theme** toggle
 
 ## Installation
 
+### Debian/Ubuntu
+
 ```bash
-# Install dependencies (Fedora/RHEL)
-sudo dnf install python3-gobject gtk4 libadwaita
-
-# Install dependencies (Debian/Ubuntu)
-sudo apt install python3-gi gir1.2-gtk-4.0 gir1.2-adw-1
-
-# Run from source
-PYTHONPATH=src python3 -c "from tidskollen.main import main; main()"
+echo "deb [signed-by=/usr/share/keyrings/yeager-keyring.gpg] https://yeager.github.io/debian-repo stable main" | sudo tee /etc/apt/sources.list.d/yeager.list
+curl -fsSL https://yeager.github.io/debian-repo/yeager-keyring.gpg | sudo tee /usr/share/keyrings/yeager-keyring.gpg > /dev/null
+sudo apt update && sudo apt install tidskollen
 ```
+
+### Fedora/openSUSE
+
+```bash
+sudo dnf config-manager --add-repo https://yeager.github.io/rpm-repo/yeager.repo
+sudo dnf install tidskollen
+```
+
+### From source
+
+```bash
+git clone https://github.com/yeager/tidskollen.git
+cd tidskollen && pip install -e .
+tidskollen
+```
+
+## Translation
+
+Help translate on [Transifex](https://www.transifex.com/danielnylander/tidskollen/).
 
 ## License
 
-GPL-3.0-or-later
+GPL-3.0-or-later — see [LICENSE](LICENSE) for details.
 
 ## Author
 
-Daniel Nylander
-
-## Links
-
-- [GitHub](https://github.com/yeager/tidskollen)
-- [Issues](https://github.com/yeager/tidskollen/issues)
-- [Translations](https://app.transifex.com/danielnylander/tidskollen)
+**Daniel Nylander** — [danielnylander.se](https://danielnylander.se)
