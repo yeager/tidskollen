@@ -1,12 +1,18 @@
 """Main window for Tidskollen - Visual Time Timer."""
+import json
 import math
 import gettext
+from datetime import datetime
+from pathlib import Path
+
 import gi
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 from gi.repository import Gtk, Adw, Gio, GLib, Gdk
 
 _ = gettext.gettext
+
+from tidskollen.export import show_export_dialog
 
 PRESET_TIMES = [1, 2, 5, 10, 15, 20, 30, 45, 60]
 
@@ -75,7 +81,9 @@ class TidskollenWindow(Adw.ApplicationWindow):
         self.total_seconds = 300  # default 5 min
         self.remaining = self.total_seconds
         self.timer_id = None
+        self.sessions = self._load_sessions()
         self._build_ui()
+        self._setup_shortcuts()
         self._start_clock()
 
     def _build_ui(self):
@@ -95,12 +103,22 @@ class TidskollenWindow(Adw.ApplicationWindow):
         fullscreen_btn.connect("clicked", lambda *_: self.get_application().activate_action("fullscreen"))
         header.pack_end(fullscreen_btn)
 
+        export_btn = Gtk.Button(icon_name="document-save-symbolic",
+                                tooltip_text=_("Export sessions (Ctrl+E)"))
+        export_btn.connect("clicked", self._on_export)
+        header.pack_end(export_btn)
+
         menu = Gio.Menu()
+        menu.append(_("Export Sessions"), "win.export")
         menu.append(_("Keyboard Shortcuts"), "app.shortcuts")
         menu.append(_("About Time Check"), "app.about")
         menu.append(_("Quit"), "app.quit")
         menu_btn = Gtk.MenuButton(icon_name="open-menu-symbolic", menu_model=menu)
         header.pack_end(menu_btn)
+
+        export_action = Gio.SimpleAction.new("export", None)
+        export_action.connect("activate", self._on_export)
+        self.add_action(export_action)
 
         # Timer display
         self.timer_area = TimerDrawingArea()
@@ -186,6 +204,7 @@ class TidskollenWindow(Adw.ApplicationWindow):
             self.start_btn.set_sensitive(True)
             self.stop_btn.set_sensitive(False)
             self._update_display()
+            self._log_session(completed=True)
             self._on_timer_done()
             return False
         self._update_display()
@@ -207,6 +226,50 @@ class TidskollenWindow(Adw.ApplicationWindow):
         )
         dialog.add_response("ok", _("OK"))
         dialog.present()
+
+    def _setup_shortcuts(self):
+        ctrl = Gtk.EventControllerKey()
+        ctrl.connect("key-pressed", self._on_key)
+        self.add_controller(ctrl)
+
+    def _on_key(self, ctrl, keyval, keycode, state):
+        if state & Gdk.ModifierType.CONTROL_MASK:
+            if keyval == Gdk.KEY_e or keyval == Gdk.KEY_E:
+                self._on_export()
+                return True
+        return False
+
+    def _sessions_path(self):
+        p = Path(GLib.get_user_config_dir()) / "tidskollen"
+        p.mkdir(parents=True, exist_ok=True)
+        return p / "sessions.json"
+
+    def _load_sessions(self):
+        path = self._sessions_path()
+        if path.exists():
+            try:
+                return json.loads(path.read_text())
+            except Exception:
+                pass
+        return []
+
+    def _save_sessions(self):
+        self._sessions_path().write_text(
+            json.dumps(self.sessions, indent=2, ensure_ascii=False))
+
+    def _log_session(self, completed):
+        self.sessions.append({
+            "date": datetime.now().strftime("%Y-%m-%d %H:%M"),
+            "duration": self.total_seconds // 60,
+            "completed": completed,
+        })
+        # Keep last 200 sessions
+        self.sessions = self.sessions[-200:]
+        self._save_sessions()
+
+    def _on_export(self, *args):
+        show_export_dialog(self, self.sessions,
+                          lambda msg: self.status_label.set_label(msg))
 
     def _toggle_theme(self, btn):
         mgr = Adw.StyleManager.get_default()

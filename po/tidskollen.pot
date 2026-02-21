@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tidskollen\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-21 08:20+0100\n"
+"POT-Creation-Date: 2026-02-21 15:21+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,50 +17,133 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/tidskollen/main.py:59 src/tidskollen/window.py:73
+#: src/tidskollen/export.py:13 src/tidskollen/main.py:59
+#: src/tidskollen/window.py:79
 msgid "Time Check"
 msgstr ""
 
-#: src/tidskollen/window.py:89
+#: src/tidskollen/export.py:27 src/tidskollen/export.py:77
+msgid "Date"
+msgstr ""
+
+#: src/tidskollen/export.py:27 src/tidskollen/export.py:79
+msgid "Duration (min)"
+msgstr ""
+
+#: src/tidskollen/export.py:27 src/tidskollen/export.py:81
+msgid "Completed"
+msgstr ""
+
+#: src/tidskollen/export.py:32
+msgid "Yes"
+msgstr ""
+
+#: src/tidskollen/export.py:32
+msgid "No"
+msgstr ""
+
+#: src/tidskollen/export.py:66
+msgid "Timer Sessions"
+msgstr ""
+
+#: src/tidskollen/export.py:118
+msgid "Export Timer Sessions"
+msgstr ""
+
+#: src/tidskollen/export.py:119
+msgid "Choose export format:"
+msgstr ""
+
+#: src/tidskollen/export.py:122
+msgid "Cancel"
+msgstr ""
+
+#: src/tidskollen/export.py:123
+msgid "CSV"
+msgstr ""
+
+#: src/tidskollen/export.py:124
+msgid "JSON"
+msgstr ""
+
+#: src/tidskollen/export.py:125
+msgid "PDF"
+msgstr ""
+
+#: src/tidskollen/export.py:146
+msgid "Save Export"
+msgstr ""
+
+#: src/tidskollen/export.py:160
+#, python-format
+msgid "Exported %s"
+msgstr ""
+
+#: src/tidskollen/export.py:163 src/tidskollen/export.py:186
+#, python-format
+msgid "Export error: %s"
+msgstr ""
+
+#: src/tidskollen/export.py:168
+msgid "Save PDF"
+msgstr ""
+
+#: src/tidskollen/export.py:181
+msgid "PDF exported"
+msgstr ""
+
+#: src/tidskollen/export.py:183
+msgid "PDF export requires cairo."
+msgstr ""
+
+#: src/tidskollen/window.py:97
 msgid "Toggle dark/light theme"
 msgstr ""
 
-#: src/tidskollen/window.py:94
+#: src/tidskollen/window.py:102
 msgid "Fullscreen"
 msgstr ""
 
-#: src/tidskollen/window.py:99
+#: src/tidskollen/window.py:107
+msgid "Export sessions (Ctrl+E)"
+msgstr ""
+
+#: src/tidskollen/window.py:112
+msgid "Export Sessions"
+msgstr ""
+
+#: src/tidskollen/window.py:113
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: src/tidskollen/window.py:100
+#: src/tidskollen/window.py:114
 msgid "About Time Check"
 msgstr ""
 
-#: src/tidskollen/window.py:101
+#: src/tidskollen/window.py:115
 msgid "Quit"
 msgstr ""
 
-#: src/tidskollen/window.py:126
+#: src/tidskollen/window.py:144
 msgid "Start"
 msgstr ""
 
-#: src/tidskollen/window.py:132
+#: src/tidskollen/window.py:150
 msgid "Stop"
 msgstr ""
 
-#: src/tidskollen/window.py:139
+#: src/tidskollen/window.py:157
 msgid "Reset"
 msgstr ""
 
-#: src/tidskollen/window.py:205
+#: src/tidskollen/window.py:224
 msgid "Time's up!"
 msgstr ""
 
-#: src/tidskollen/window.py:206
+#: src/tidskollen/window.py:225
 msgid "The timer has finished."
 msgstr ""
 
-#: src/tidskollen/window.py:208
+#: src/tidskollen/window.py:227
 msgid "OK"
 msgstr ""
