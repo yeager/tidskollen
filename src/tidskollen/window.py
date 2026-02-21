@@ -70,7 +70,7 @@ class TimerDrawingArea(Gtk.DrawingArea):
 class TidskollenWindow(Adw.ApplicationWindow):
     def __init__(self, **kwargs):
         super().__init__(**kwargs, default_width=450, default_height=600,
-                         title=_("Tidskollen"))
+                         title=_("Time Check"))
         self.running = False
         self.total_seconds = 300  # default 5 min
         self.remaining = self.total_seconds
@@ -97,7 +97,7 @@ class TidskollenWindow(Adw.ApplicationWindow):
 
         menu = Gio.Menu()
         menu.append(_("Keyboard Shortcuts"), "app.shortcuts")
-        menu.append(_("About Tidskollen"), "app.about")
+        menu.append(_("About Time Check"), "app.about")
         menu.append(_("Quit"), "app.quit")
         menu_btn = Gtk.MenuButton(icon_name="open-menu-symbolic", menu_model=menu)
         header.pack_end(menu_btn)
