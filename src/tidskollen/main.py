@@ -7,6 +7,7 @@ gi.require_version('Adw', '1')
 from gi.repository import Gtk, Adw, Gio, GLib
 from tidskollen import __version__
 from tidskollen.window import TidskollenWindow
+from tidskollen.accessibility import apply_large_text
 
 TEXTDOMAIN = "tidskollen"
 gettext.textdomain(TEXTDOMAIN)
@@ -19,6 +20,7 @@ class TidskollenApp(Adw.Application):
                          flags=Gio.ApplicationFlags.DEFAULT_FLAGS)
 
     def do_activate(self):
+        apply_large_text()
         win = self.props.active_window or TidskollenWindow(application=self)
         win.present()
 
