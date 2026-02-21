@@ -56,7 +56,7 @@ class TidskollenApp(Adw.Application):
 
     def _on_about(self, *_):
         about = Adw.AboutDialog(
-            application_name=_("Tidskollen"),
+            application_name=_("Time Check"),
             application_icon="tidskollen",
             version=__version__,
             developer_name="Daniel Nylander",
