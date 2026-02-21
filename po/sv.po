@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the tidskollen package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: tidskollen\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-18 10:19+0100\n"
+"POT-Creation-Date: 2026-02-21 08:20+0100\n"
 "PO-Revision-Date: 2026-02-18 09:21+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/304958/sv/)\n"
@@ -21,8 +21,8 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/tidskollen/window.py:73 src/tidskollen/main.py:59
-msgid "Tidskollen"
+#: src/tidskollen/main.py:59 src/tidskollen/window.py:73
+msgid "Time Check"
 msgstr "Tidskollen"
 
 #: src/tidskollen/window.py:89
@@ -38,7 +38,7 @@ msgid "Keyboard Shortcuts"
 msgstr "Tangentbordsgenvägar"
 
 #: src/tidskollen/window.py:100
-msgid "About Tidskollen"
+msgid "About Time Check"
 msgstr "Om Tidskollen"
 
 #: src/tidskollen/window.py:101
