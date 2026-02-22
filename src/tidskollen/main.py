@@ -72,7 +72,7 @@ class TidskollenApp(Adw.Application):
         self.add_action(fullscreen_action)
         self.set_accels_for_action("app.fullscreen", ["F11"])
 
-    def _on_fullscreen(self, *_):
+    def _on_fullscreen(self, *_args):
         win = self.props.active_window
         if win:
             if win.is_fullscreen():
@@ -80,7 +80,7 @@ class TidskollenApp(Adw.Application):
             else:
                 win.fullscreen()
 
-    def _on_about(self, *_):
+    def _on_about(self, *_args):
         about = Adw.AboutDialog(
             application_name=_("Time Check"),
             application_icon="tidskollen",
@@ -95,7 +95,7 @@ class TidskollenApp(Adw.Application):
         )
         about.present(self.props.active_window)
 
-    def _on_shortcuts(self, *_):
+    def _on_shortcuts(self, *_args):
         builder = Gtk.Builder()
         builder.add_from_string('''
         <interface>
