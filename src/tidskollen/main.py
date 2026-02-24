@@ -37,6 +37,7 @@ def _save_settings(s):
 class TidskollenApp(Adw.Application):
     def __init__(self):
         super().__init__(application_id="se.yeager.tidskollen",
+        GLib.set_application_name(_("Time Check"))
                          flags=Gio.ApplicationFlags.DEFAULT_FLAGS)
 
     def do_activate(self):
