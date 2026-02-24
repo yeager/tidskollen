@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the tidskollen package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: tidskollen\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-22 06:01+0100\n"
+"POT-Creation-Date: 2026-02-23 11:03+0100\n"
 "PO-Revision-Date: 2026-02-18 09:21+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/304958/sv/)\n"
@@ -21,62 +21,10 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/tidskollen/window.py:79 src/tidskollen/export.py:13
-#: src/tidskollen/main.py:85
+#: src/tidskollen/export.py:13 src/tidskollen/main.py:83
+#: src/tidskollen/window.py:79
 msgid "Time Check"
 msgstr "Tidskollen"
-
-#: src/tidskollen/window.py:97
-msgid "Toggle dark/light theme"
-msgstr "Växla mörkt/ljust tema"
-
-#: src/tidskollen/window.py:102
-msgid "Fullscreen"
-msgstr "Helskärm"
-
-#: src/tidskollen/window.py:107
-msgid "Export sessions (Ctrl+E)"
-msgstr "Exportera sessioner (Ctrl+E)"
-
-#: src/tidskollen/window.py:112
-msgid "Export Sessions"
-msgstr "Exportera sessioner"
-
-#: src/tidskollen/window.py:113
-msgid "Keyboard Shortcuts"
-msgstr "Tangentbordsgenvägar"
-
-#: src/tidskollen/window.py:114
-msgid "About Time Check"
-msgstr "Om Tidskollen"
-
-#: src/tidskollen/window.py:115
-msgid "Quit"
-msgstr "Avsluta"
-
-#: src/tidskollen/window.py:144
-msgid "Start"
-msgstr "Starta"
-
-#: src/tidskollen/window.py:150
-msgid "Stop"
-msgstr "Stoppa"
-
-#: src/tidskollen/window.py:157
-msgid "Reset"
-msgstr "Återställ"
-
-#: src/tidskollen/window.py:224
-msgid "Time's up!"
-msgstr "Tiden är slut!"
-
-#: src/tidskollen/window.py:225
-msgid "The timer has finished."
-msgstr "Timern har gått klart."
-
-#: src/tidskollen/window.py:227
-msgid "OK"
-msgstr "OK"
 
 #: src/tidskollen/export.py:27 src/tidskollen/export.py:77
 msgid "Date"
@@ -152,15 +100,23 @@ msgstr "PDF exporterad"
 msgid "PDF export requires cairo."
 msgstr "PDF-export kräver cairo."
 
-#: src/tidskollen/main.py:130
+#: src/tidskollen/main.py:93
+msgid "Help translate"
+msgstr "Hjälp till att översätta"
+
+#: src/tidskollen/main.py:95
+msgid "Thanks to"
+msgstr "Tack till"
+
+#: src/tidskollen/main.py:134
 msgid "Welcome"
 msgstr "Välkommen"
 
-#: src/tidskollen/main.py:136
+#: src/tidskollen/main.py:140
 msgid "Welcome to Time Tracker"
 msgstr "Välkommen till Tidskollen"
 
-#: src/tidskollen/main.py:138
+#: src/tidskollen/main.py:142
 msgid ""
 "A visual countdown timer for children.\n"
 "\n"
@@ -176,6 +132,58 @@ msgstr ""
 "✓ Ljudsignal när tiden är slut\n"
 "✓ Lätt att förstå för alla åldrar"
 
-#: src/tidskollen/main.py:141
+#: src/tidskollen/main.py:145
 msgid "Get Started"
 msgstr "Kom igång"
+
+#: src/tidskollen/window.py:97
+msgid "Toggle dark/light theme"
+msgstr "Växla mörkt/ljust tema"
+
+#: src/tidskollen/window.py:102
+msgid "Fullscreen"
+msgstr "Helskärm"
+
+#: src/tidskollen/window.py:107
+msgid "Export sessions (Ctrl+E)"
+msgstr "Exportera sessioner (Ctrl+E)"
+
+#: src/tidskollen/window.py:112
+msgid "Export Sessions"
+msgstr "Exportera sessioner"
+
+#: src/tidskollen/window.py:113
+msgid "Keyboard Shortcuts"
+msgstr "Tangentbordsgenvägar"
+
+#: src/tidskollen/window.py:114
+msgid "About Time Check"
+msgstr "Om Tidskollen"
+
+#: src/tidskollen/window.py:115
+msgid "Quit"
+msgstr "Avsluta"
+
+#: src/tidskollen/window.py:144
+msgid "Start"
+msgstr "Starta"
+
+#: src/tidskollen/window.py:150
+msgid "Stop"
+msgstr "Stoppa"
+
+#: src/tidskollen/window.py:157
+msgid "Reset"
+msgstr "Nollställ"
+
+#: src/tidskollen/window.py:224
+msgid "Time's up!"
+msgstr "Tiden är slut!"
+
+#: src/tidskollen/window.py:225
+msgid "The timer has finished."
+msgstr "Timern har gått klart."
+
+#: src/tidskollen/window.py:227
+msgid "OK"
+msgstr "OK"
